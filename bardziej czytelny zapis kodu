@@ -1,0 +1,13 @@
+const arrA = [1, 2, 3];
+const arrB = [3, 4, 5];
+
+const uniqueInA = arrA.filter(x => !arrB.includes(x));
+const uniqueInB = arrB.filter(x => !arrA.includes(x));
+
+const result = uniqueInA.concat(uniqueInB);
+
+console.log(result); // [1, 2, 4, 5]
+
+
+
+//arrA.filter(x => !arrB.includes(x)).concat(arrB.filter(x => !arrA.includes(x)))
